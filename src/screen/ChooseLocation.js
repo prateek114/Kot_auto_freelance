@@ -85,7 +85,7 @@ const ChooseLocation = () => {
             <View>
                 
                 <Text>Rupees 55</Text>
-                <Text>1.5 Kms </Text>
+                <Text>175 Kms </Text>
             
 
                 <View>
