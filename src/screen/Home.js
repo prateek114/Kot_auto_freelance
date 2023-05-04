@@ -31,12 +31,12 @@ export default function Home({navigation}) {
   const [state,setState]=useState({
     curLoc:{
       latitude:25.1383,
-      longitude:75.8648,
+      longitude:75.8076,
     },
 
     destinationCords:{
-      latitude:26.9124,
-      longitude:75.8076,
+      latitude:25.1580,
+      longitude:75.8272,
     }
   })
 

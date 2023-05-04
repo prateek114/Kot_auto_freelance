@@ -5,7 +5,7 @@ import React,{useState} from 'react'
 import { showError, showSuccess } from '../helper/helperFunction';
 import Modal from "react-native-modal";
 
-const ChooseLocation = () => {
+const ChooseLocation = ({navigation}) => {
     const [isModalVisible, setModalVisible] = useState(false);
 
     const toggleModal = () => {
@@ -84,19 +84,24 @@ const ChooseLocation = () => {
         <Modal isVisible={isModalVisible}>
             <View>
                 
-                <Text>Rupees 55</Text>
-                <Text>175 Kms </Text>
+                <Text>Rupees 50</Text>
+                <Text>3.9km</Text>
             
 
                 <View>
                 <Button style={styles.button}
+                color={'#E8BD0D'}
                         title="Request to ride"
-                        onPress={()=>Alert.alert('Ride Confirm!!!')}
+                        // onPress={()=>Alert.alert('Ride Confirm!!!')}
+                        onPress={()=>navigation.navigate('RatingPage')}
+                    
                     />
                 </View>
 
                 <View>
-                    <Button style={styles.text}
+                    <Button style={{margin:20
+                    }}
+                    color={'#E8BD0D'}
                         title="Cancel ride"
                         onPress={()=>Alert.alert('Ride Cancelled')}
                     />
@@ -112,14 +117,21 @@ export default ChooseLocation
 const styles = StyleSheet.create({
     container:{
         flex:1,
+        borderWidth:2,
+        borderColor:'black',
+        borderStyle:'solid'
     },
     button:{
         textAlign:'center',
         fontSize:10,
         width:12,
-        borderRadius:'center'
+        borderRadius:'center',
+        margin:20,
+        backgroundColor:'#E8BD0D'
     },
     text:{
-
+    textAlign:'center',
+    fontSize:20,
+    fontColor:'white'
     }
 })
